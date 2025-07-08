@@ -1,0 +1,65 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "canvas-confetti": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.module.mjs"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="app-container">
+        <div id="calculator">
+            <div id="display" class="display-text">0</div>
+            <div id="buttons">
+                <!-- Row 1 -->
+                <button class="btn-op" data-key="clear">C</button>
+                <button class="btn-op" data-key="/">/</button>
+                <button class="btn-op" data-key="*">*</button>
+                <button class="btn-op" data-key="backspace">⌫</button>
+                
+                <!-- Row 2 -->
+                <button class="btn-num" data-key="7">7</button>
+                <button class="btn-num" data-key="8">8</button>
+                <button class="btn-num" data-key="9">9</button>
+                <button class="btn-op" data-key="-">-</button>
+
+                <!-- Row 3 -->
+                <button class="btn-num" data-key="4">4</button>
+                <button class="btn-num" data-key="5">5</button>
+                <button class="btn-num" data-key="6">6</button>
+                <button class="btn-op" data-key="+">+</button>
+
+                <!-- Row 4 & 5 -->
+                <button class="btn-num" data-key="1">1</button>
+                <button class="btn-num" data-key="2">2</button>
+                <button class="btn-num" data-key="3">3</button>
+                <button id="equals" class="btn-op" data-key="=">=</button>
+                
+                <button class="btn-num zero" data-key="0">0</button>
+                <button class="btn-num" data-key=".">.</button>
+            </div>
+        </div>
+
+        <div id="cheat-sheet" class="hidden">
+         <video src="WIN_20230218_12_11_43_Pro.mp4" type="video/mp4" controls></video>
+
+         </video>
+         
+
+            
+            <button id="back-to-calc-btn">Zurück zum Rechner</button>
+        </div>
+        
+        <input type="file" id="image-upload" accept="image/*" class="hidden">  
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

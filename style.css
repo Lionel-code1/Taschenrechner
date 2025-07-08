@@ -1,0 +1,161 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 20px;
+    box-shadow: 
+        -8px -8px 16px rgba(255, 255, 255, 0.8),
+        8px 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+#calculator {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    font-size: 3.5rem;
+    padding: 20px;
+    text-align: right;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    min-height: 60px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #333;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    line-height: 1.2;
+}
+
+.display-text-small {
+    font-size: 2rem;
+}
+
+.display-text-xsmall {
+    font-size: 1.5rem;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #e0e0e0;
+    color: #555;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
+}
+
+button:active {
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    font-size: 1.45rem;
+}
+
+.btn-op {
+    color: #ff9500;
+}
+
+#equals {
+    grid-row: span 2;
+    background-color: #ff9500;
+    color: white;
+    border-radius: 35px;
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 35px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#cheat-sheet {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    position: fixed; /* macht es unabhängig vom restlichen Layout */
+    top: 0;
+    left: 0;
+    width: 100vw;    /* volle Breite des Bildschirms */
+    height: 100vh;   /* volle Höhe des Bildschirms */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1px;
+    box-sizing: border-box;
+    z-index: 9999;   /* stellt sicher, dass es ganz oben liegt */
+}
+
+
+
+#cheat-image {
+    max-width: 100%;
+    max-height: calc(100% - 70px);
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#back-to-calc-btn {
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    background-color: #333;
+    color: white;
+    box-shadow: none;
+}
+
+#back-to-calc-btn:hover {
+    background-color: #444;
+    box-shadow: none;
+}
+
+#back-to-calc-btn:active {
+     background-color: #555;
+     box-shadow: none;
+     font-size: 1.15rem;
+}
+
+#cheat-text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 0.9em;
+    color: #aaa;
+}
